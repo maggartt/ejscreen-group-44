@@ -5,8 +5,8 @@ date: "11/14/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Attach necessary packages
 library(tidyverse)
@@ -21,7 +21,7 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
   clean_names() # Convert data to `lower case snake`
 ```
 
-```{r}
+```{r, fig.align='center'}
 # Create a scatterplot showing % white versus CalEnviroScreen pollution burden score
 
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score))+
@@ -31,5 +31,5 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score))+
         scale_fill_gradient(low = "khaki2", high = "orange4") + # Update the fill gradient 
         theme_minimal() # Add minimal theme to the graph
 ```
-
+<center>**Figure 1.** A hexplot showing the distribution of white populations and related CalEnviroScreen (CES) scores. Darker hexagons show increased density of white populations, and higher CES scores imply high cumulative pollution burdens and highly vulnerable population characteristics.</center>
 
