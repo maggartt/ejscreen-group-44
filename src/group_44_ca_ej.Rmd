@@ -27,6 +27,9 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score))+
         geom_hex() +
         labs(x = "\nWhite Population (%)", # Label for white populatin using \n as line break
-             y = "CES 3.0 Score\n") # Label for CalEnviroScreen Score using \n as line break
+             y = "CES 3.0 Score\n") + # Label for CalEnviroScreen Score using \n as line break
+        scale_fill_gradient(low = "khaki2", high = "orange4") + # Update the fill gradient 
+        theme_minimal() # Add minimal theme to the graph
 ```
+
 
