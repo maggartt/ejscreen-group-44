@@ -32,7 +32,7 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score))+
         theme_minimal() # Add minimal theme to the graph
 ```
 <center>**Figure 1.** A hexplot showing the distribution of white populations and related CalEnviroScreen (CES) scores. Darker hexagons show increased density of white populations, and higher CES scores imply high cumulative pollution burdens and highly vulnerable population characteristics.</center>
-
+</br>
 **Analysis**: A negative correlation between percentage of white population and CES 3.0 Score is shown based on **Figure 1** above meaning that CES 3.0 Score decreases as the percentage of white population increases. This indicates that communities with a higher white population are likely to receive low total CES 3.0 scores, experience the privilege of lower cumulative pollution burdens, and have less vulnerable population characteristics that cause pollutants to become more deadly. 
 
 **Data Citation**: CalEnviroScreen 3.0 Data, California Office of Environmental Health Hazard Assessment, 2017; U.S Census Bureau, 2010. 
