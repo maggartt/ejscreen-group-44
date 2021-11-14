@@ -1,0 +1,21 @@
+---
+title: "Group 44 CA pollution burden"
+author: "Trevor Maggart & Kirsten White"
+date: "11/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Attach necessary packages
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+```{r}
+# Read in the data
+ces <- read_csv(here("data", "ces3demographics.csv")) %>%
+  clean_names() # Convert data to `lower case snake`
+```
